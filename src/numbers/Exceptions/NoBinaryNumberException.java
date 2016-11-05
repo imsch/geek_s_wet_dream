@@ -1,8 +1,6 @@
 package numbers.Exceptions;
+import numbers.Number;
 
-/**
- * Created by legion on 11/3/16.
- */
 public class NoBinaryNumberException extends Exception {
     public NoBinaryNumberException() {
         super();

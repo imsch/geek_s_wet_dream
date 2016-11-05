@@ -19,4 +19,8 @@ public class BinaryNumber extends Number{
         return value.length();
     }
 
+    public String toString(){
+        return value;
+    }
+
 }
