@@ -1,8 +1,9 @@
-package numbers.Converter;
+package Numbers.Converter;
 
-import numbers.BinaryNumber;
-import numbers.DecimalNumber;
-import numbers.Exceptions.NoBinaryNumberException;
+
+import Numbers.*;
+import Numbers.Exceptions.*;
+import MyUtilities.*;
 
 import static java.lang.Math.pow;
 
@@ -28,18 +29,17 @@ public class Converter {
     }
 
     public BinaryNumber decimalToBinary(DecimalNumber number) throws Exception {
-        String bin = "";
+        StringMethods sm = new StringMethods();
+        String binWO = ""; //Wrong Order
         int dec = number.value;
-
-        while (dec != 0) {
-            bin += dec % 2;
-            dec /= 2;
+        if (dec < 0) {
+            throw new NegativeDecimalException(number);
+        } else {
+            while (dec != 0) {
+                binWO += dec % 2;
+                dec /= 2;
+            }
         }
-        String swap = "";
-        for(int i = 0; i< bin.length(); i++){
-
-            swap = swap+bin.charAt(bin.length()-i);
-        }
-        return new BinaryNumber(swap);
+        return new BinaryNumber(sm.stringInvert(binWO));
     }
 }

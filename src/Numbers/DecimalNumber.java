@@ -1,10 +1,9 @@
-package numbers;
+package Numbers;
 
 /**
  * Created by legion on 05.11.16.
  */
 public class DecimalNumber extends Number {
-
     public int value;
 
     public DecimalNumber(int value) {
@@ -12,6 +11,6 @@ public class DecimalNumber extends Number {
     }
 
     public String toString() {
-        return ""+value;
+        return "" + value;
     }
 }

@@ -1,5 +1,5 @@
-package numbers.Exceptions;
-import numbers.Number;
+package Numbers.Exceptions;
+import Numbers.BinaryNumber;
 
 public class NoBinaryNumberException extends Exception {
     public NoBinaryNumberException() {
@@ -10,7 +10,7 @@ public class NoBinaryNumberException extends Exception {
         super(s);
     }
 
-    public NoBinaryNumberException(Number number, int position){
+    public NoBinaryNumberException(BinaryNumber number, int position){
         super();
         System.out.println(number+" is not a binary number, position "+(position+1)+" is wrong!");
     }

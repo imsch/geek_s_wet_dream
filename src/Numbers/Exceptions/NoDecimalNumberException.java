@@ -1,6 +1,6 @@
-package numbers.Exceptions;
+package Numbers.Exceptions;
 
-import numbers.Number;
+import Numbers.Number;
 
 /**
  * Created by legion on 05.11.16.
