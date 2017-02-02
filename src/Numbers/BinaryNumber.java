@@ -41,6 +41,8 @@ public class BinaryNumber extends Number {
             return erg;
         } catch (Exception e) {
             System.out.println(e.toString());
+            return null;
         }
+
     }
 }
